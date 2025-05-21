@@ -7,5 +7,4 @@ indexRouter.get("/", indexController.userListGet);
 indexRouter.get("/new", indexController.userFormGet);
 indexRouter.post("/new", indexController.userFormPost);
 
-
 module.exports = indexRouter;
