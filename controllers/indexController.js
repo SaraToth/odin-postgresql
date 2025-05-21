@@ -1,11 +1,9 @@
 exports.userListGet = (req, res) => {
-    console.log("usernames will be logged here - wip");
-    res.send("user list get was executed");
+    res.render("index", { title: "Home" });
 }
 
 exports.userFormGet = (req, res) => {
-    console.log("get a form");
-    res.send("user form get was executed");
+    res.render("newUser", { title: "Create a New User" });
 }
 
 exports.userFormPost = (req, res) => {
