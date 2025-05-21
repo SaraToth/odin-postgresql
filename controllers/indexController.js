@@ -18,13 +18,7 @@ exports.userFormPost = [
     validateUser,
 
     (req, res) => {
-        // const errors = validationResult(req);
-        // if (!errors.isEmpty()) {
-        //     return res.status(400).render("newUser", {
-        //         title: "Create a New User ERROR",
-        //         // errors: errors.array(),
-        //     });
-        // }
+        // Missing: Some logic to handle errors
         const { username } = req.body;
         console.log(username);
         res.redirect("/");
