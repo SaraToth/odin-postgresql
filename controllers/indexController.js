@@ -6,21 +6,22 @@ const validateUser = [
         .isLength({ min: 8, max: 15 }).withMessage("username must be between 8 and 15 characters long"),
 ]
 
-exports.userListGet = (req, res) => {
+async function userListGet(req, res) {
     res.render("index", { title: "Home" });
 }
 
-exports.userFormGet = (req, res) => {
+async function userFormGet(req, res) {
     res.render("newUser", { title: "Create a New User" });
 }
 
-exports.userFormPost = [
-    validateUser,
-
-    (req, res) => {
-        // Missing: Some logic to handle errors
+async function userFormPost(req, res) {
         const { username } = req.body;
         console.log(username);
         res.redirect("/");
-    }
-];
+}
+
+module.exports = {
+    userListGet,
+    userFormGet,
+    userFormPost
+};
